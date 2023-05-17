@@ -24,7 +24,9 @@ class App extends React.Component {
 
   async loadData() {
     try {
-      const res = await fetch("http://192.170.0.12:8000/getlocations");
+      const res = await fetch(
+        "https://openshiftbackend-git-liorrr-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/getlocations"
+      );
       const locations = await res.json();
       console.log(locations)
       this.setState({
